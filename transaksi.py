@@ -91,29 +91,36 @@ class Transaksi:
                                             self.inventory_dict[nama_item]['Harga']))
         # Menampilkan pilihan aksi yang bisa dilakukan user
         print("Pilih aksi yang ingin dilakukan:")
-        print("1. Update jumlah item")
-        print("2. Update harga")
-        print("3. Delete item")
-        print("4. Kembali ke menu")
+        print("1. Update nama item")
+        print("2. Update jumlah item")
+        print("3. Update harga")
+        print("4. Delete item")
+        print("5. Kembali ke menu")
 
         try:
             # User diminta untuk memilih aksi yang ingin dilakukan
             action = int(input("Masukkan angka untuk mengedit: "))
             if action == 1:
+                # User memilih untuk mengubah nama item
+                nama_baru = input(f"Masukkan nama baru: ")
+                self.inventory_dict[nama_baru] = self.inventory_dict.pop(nama_item)
+                self.inventory_dict[nama_baru]['Nama Item'] = nama_baru
+                print(f"Item {nama_item} telah diubah menjadi {nama_baru}")
+            elif action == 2:
                 # User memilih untuk mengubah jumlah item
                 jumlah_baru = int(input(f"Masukkan jumlah item yang baru {nama_item}: "))
                 if jumlah_baru <= 0:
                     raise ValueError("Jumlah item harus lebih besar dari 0")
                 self.inventory_dict[nama_item]['Jumlah Item'] = jumlah_baru
                 print(f"Jumlah item {nama_item} telah diperbarui")
-            elif action == 2:
+            elif action == 3:
                 # User memilih untuk mengubah harga item
                 harga_baru = float(input(f"Masukkan harga baru untuk {nama_item}: "))
                 if harga_baru <= 0:
                     raise ValueError("Harga harus lebih besar dari 0")
                 self.inventory_dict[nama_item]['Harga'] = harga_baru
                 print(f"Harga {nama_item} telah diperbarui")
-            elif action == 3:
+            elif action == 4:
                 # User memilih untuk menghapus item pada daftar belanja
                 print(f"Item '{nama_item}' akan dihapus dari daftar:")
                 print("{:<15} {:<10} {:<10}".format("Nama Item", "Jumlah Item", "Harga"))
@@ -125,7 +132,7 @@ class Transaksi:
                     print(f"Item {nama_item} telah dihapus dari daftar")
                 else:
                     print(f"Hapus item {nama_item} dibatalkan")
-            elif action == 4:
+            elif action == 5:
                 # User memilih untuk kembali ke menu awal
                 print("Kembali ke menu")
             else:
@@ -170,9 +177,9 @@ class Transaksi:
         if diskon > 0:
             potongan_harga = total_biaya * diskon
             total_biaya -= potongan_harga
-            print(f"Diskon {diskon * 100:.0f}%: -{potongan_harga:.2f}")
+            print(f"Diskon {diskon * 100:.0f}%: Rp -{potongan_harga:.2f}")
 
-        print(f"Total biaya: {total_biaya:.2f}")
+        print(f"Total biaya: Rp {total_biaya:.2f}")
 
         # Menambahkan kondisi untuk konfirmasi sebelum mencetak transaksi
         while True:
