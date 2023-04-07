@@ -12,3 +12,5 @@ Fitur yang diminta adalah sebagai berikut:
 3. Customer dapat menghapus dan mereset barang belanja
 4. Customer dapat melihat daftar transaksi
 5. Customer mendapatkan diskon 5%, 8%, 10% dengan S&K berlaku
+
+## Flowchart
