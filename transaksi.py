@@ -24,8 +24,10 @@ class Transaksi:
         while True:
             try:
                 # Mendapatkan input dari user
-                nama_item = input("Masukkan nama item (jika sudah ketik n/no): ")
+                nama_item = input("Masukkan nama item (Apakah sudah selesai menambah item?)(y/n): ")
                 if nama_item.lower() == 'no' or nama_item.lower() == 'n':
+                    continue
+                elif nama_item.lower() == 'yes' or nama_item.lower() == 'y':
                     break
                 jumlah_item = int(input("Masukkan jumlah item: "))
                 harga = float(input("Masukkan harga item: "))
