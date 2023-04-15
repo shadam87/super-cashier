@@ -67,3 +67,7 @@ a. Pengguna ingin mengecek daftar transaksi serta melakukan checkout
 
 ## Conclusion
   Pada permasalahan self-service ini terdapat banyak hal yang perlu diantisipasi sebab program ini masih terbatas sehingga akan terjadi banyak sekali permasalahan yang akan didapat dari penggunaannya. Sebuah sistem self-service sendiri memiliki kelebihan dan kekurangan, jika dilihat dari kelebihannya dapat diketahui bahwa hal ini dapat mengurangi biaya operasional namun pada sisi kekurangan dapat mengakibatkan kerugian yang besar jika program yang digunakan terjadi permasalahan seperti bug yang fatal atau vulnerability yang sampai sekarang masih terjadi meskipun di perusahaan besar. Oleh karena itu diharapkan program ini dapat terus dikembangkan sampai benar-benar menjadi program self-service yang dapat membantu para pebisnis untuk dapat menekan biaya operasional.
+  
+## Reference
+1. https://github.com/MuhFaridanSutariya/super-cashier (untuk readme.md)
+2. https://chat.openai.com/
